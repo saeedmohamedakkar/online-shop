@@ -39,14 +39,14 @@ let [users,setUsers]=useState([])
 
 useEffect(()=>{
   
-  axios({method:"get",url:"http://localhost:7000/users"}).then((users=>setUsers(users.data)))
+  axios({method:"get",url:"https://db-kco2.onrender.com/users"}).then((users=>setUsers(users.data)))
   
 },[])
 
 ///////////////////////////////////////////////
   useEffect(()=>{
     setLoading(true)
-    axios({method:"get",url:"http://localhost:7000/products"}).then((data=>setProducts(data.data)))
+    axios({method:"get",url:"https://db-kco2.onrender.com/products"}).then((data=>setProducts(data.data)))
     setLoading(false)
   },[])
 

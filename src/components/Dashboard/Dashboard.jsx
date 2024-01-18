@@ -36,7 +36,7 @@ export default function Dashboard() {
   let [users, setUsers] = useState([])
 
   async function myProducts() {
-    let { data } = await axios.get(`http://localhost:7000/products`)
+    let { data } = await axios.get(`https://db-kco2.onrender.com/products`)
 
     setProducts(data)
   }
@@ -45,7 +45,7 @@ export default function Dashboard() {
 
   async function removeOrMakeAdmin(id) {
 
-    let { data } = await axios.get(`http://localhost:7000/users/${id}`)
+    let { data } = await axios.get(`https://db-kco2.onrender.com/users/${id}`)
     setUser(data)
     setFirstName(data.firstName)
     setPassword(data.password)
@@ -62,13 +62,13 @@ export default function Dashboard() {
       let newUser = { firstName: firstName, lastName: lastName, userName: userName, email: email, password: password, city: city, phoneNumber: phoneNumber, role: "member", gander: gander }
 
 
-      await axios.put(`http://localhost:7000/users/${id}`, newUser)
+      await axios.put(`https://db-kco2.onrender.com/users/${id}`, newUser)
       myUsers()
       setIsAdmin(true)
     }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (id === user.id && data.role === "member") {
-      let { data } = await axios.get(`http://localhost:7000/users/${id}`)
+      let { data } = await axios.get(`https://db-kco2.onrender.com/users/${id}`)
       setUser(data)
       setFirstName(data.firstName)
       setPassword(data.password)
@@ -85,7 +85,7 @@ export default function Dashboard() {
       let newUser = { firstName: firstName, lastName: lastName, userName: userName, email: email, password: password, city: city, phoneNumber: phoneNumber, role: "admin", gander: gander }
 
 
-      await axios.put(`http://localhost:7000/users/${id}`, newUser)
+      await axios.put(`https://db-kco2.onrender.com/users/${id}`, newUser)
       myUsers()
       setIsAdmin(false)
     }
@@ -95,7 +95,7 @@ export default function Dashboard() {
 
   ////////////////////////////////
   async function myUsers() {
-    let { data } = await axios.get(`http://localhost:7000/users`)
+    let { data } = await axios.get(`https://db-kco2.onrender.com/users`)
 
     setUsers(data)
 
@@ -108,7 +108,7 @@ export default function Dashboard() {
 
 
   async function deleteProduct(id) {
-    let { data } = await axios.delete(`http://localhost:7000/products/${id}`)
+    let { data } = await axios.delete(`https://db-kco2.onrender.com/products/${id}`)
     myProducts()
 
     Swal.fire({
@@ -122,7 +122,7 @@ export default function Dashboard() {
   ////////////////////////////////////////
   async function deleteUser(id) {
 
-    let { data } = await axios.delete(`http://localhost:7000/users/${id}`)
+    let { data } = await axios.delete(`https://db-kco2.onrender.com/users/${id}`)
     myUsers()
 
     Swal.fire({

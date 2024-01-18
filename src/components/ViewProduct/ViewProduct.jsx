@@ -19,7 +19,7 @@ export default function ViewProduct() {
 
     async function myProduct() {
 
-        let { data } = await axios.get(` http://localhost:7000/products/${id}`)
+        let { data } = await axios.get(` https://db-kco2.onrender.com/products/${id}`)
         setItems(data)
     }
    

@@ -19,7 +19,7 @@ export default function ViewUser () {
 
 async function myUser() {
     
- let {data} = await axios.get(`http://localhost:7000/users/${id}`)
+ let {data} = await axios.get(`https://db-kco2.onrender.com/users/${id}`)
  setUser(data)
 }
 

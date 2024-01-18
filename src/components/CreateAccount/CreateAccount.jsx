@@ -119,7 +119,7 @@ else{setId(id+=1)
 
 
 
-let x = await axios.post(`http://localhost:7000/users`,userData)
+let x = await axios.post(`https://db-kco2.onrender.com/users`,userData)
 
 
 

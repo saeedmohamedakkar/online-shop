@@ -33,7 +33,7 @@ export default function EditProduct () {
     let {id} = useParams()
     
 async function editProdact() {
- let {data}= await  axios.get(`http://localhost:7000/products/${id}`)
+ let {data}= await  axios.get(`https://db-kco2.onrender.com/products/${id}`)
 
  setProduct(data)
  setProductName(data.title)
@@ -90,7 +90,7 @@ else if(productRating==""||productRating.length > 2 ){Swal.fire({
 
 else {const updatedProducts = {title:productName,price:productPrice,rating:{rate:productRating},image:producImage, description:productDescription }
 
-await  axios.put(`http://localhost:7000/products/${id}`,updatedProducts )
+await  axios.put(`https://db-kco2.onrender.com/products/${id}`,updatedProducts )
 
 navigate("/dashboard")
 
