@@ -44,7 +44,7 @@ let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 async function getUser() {
     
-let {data}= await axios.get(`http://localhost:5000/users/${userId}`)
+let {data}= await axios.get(`http://localhost:7000/users/${userId}`)
 
 setUser(data)
 
@@ -133,7 +133,7 @@ else{let userData = {id:userId,firstName:firstName,lastName:lastName,userName:us
 
 localStorage.setItem("user data",JSON.stringify(userData))
 
-await axios.put(`http://localhost:5000/users/${userId}`,userData)
+await axios.put(`http://localhost:7000/users/${userId}`,userData)
 
 navigate("/profile")
 

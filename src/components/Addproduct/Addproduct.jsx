@@ -61,7 +61,7 @@ else if(producImage===""){Swal.fire({
 
 
 
-  else{ let x =  await axios.post(`http://localhost:5000/products`,newProduct)
+  else{ let x =  await axios.post(`http://localhost:7000/products`,newProduct)
    
   navigate("/dashboard")
 
