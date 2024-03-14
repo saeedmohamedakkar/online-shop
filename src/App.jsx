@@ -1,6 +1,6 @@
 
 import Error from './components/Error/Error';
-import Nav from './components/Nav/Nav';
+import Nav from './components/Nav/NavBar';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import Products from './components/Products/Products';

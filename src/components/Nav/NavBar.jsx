@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
 import { BsCart2 } from "react-icons/bs";
 import { FcShop } from "react-icons/fc";
-const Nav = ({ cartItem, isAdmin }) => {
+import Nav from 'react-bootstrap/Nav';
+
+
+
+
+
+const NavBar = ({ cartItem, isAdmin }) => {
 
 
   let navigate = useNavigate()
@@ -27,7 +32,7 @@ const Nav = ({ cartItem, isAdmin }) => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse  justify-content-end" id="navbarNav">
+        <div className="collapse n  navbar-collapse  justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
@@ -39,11 +44,14 @@ const Nav = ({ cartItem, isAdmin }) => {
             <li className="nav-item">
               < Link className={localStorage.length === 0 ? "nav-link active" : "d-none "} to="/login">Log in</Link>
             </li>
-            {/* ///////////////////// */}
+              
+
             <li className="nav-item">
               < Link className={localStorage.getItem('isAdmin') == 'true' ? "nav-link active d-block" : "d-none"} to="/dashboard">Dashboard</Link>
             </li>
-            {/* ////////////////////////// */}
+            
+            
+
             <li className="nav-item">
               < Link className={localStorage.length > 0 ? "nav-link active d-block" : "d-none "} to="/profile">Profile</Link>
             </li>
@@ -60,6 +68,10 @@ const Nav = ({ cartItem, isAdmin }) => {
       </div>
     </nav>
 
+    {/* //////////////////////////////////////// */}
+
+
+  
 
 
 
@@ -68,4 +80,4 @@ const Nav = ({ cartItem, isAdmin }) => {
   </>);
 }
 
-export default Nav;
+export default NavBar;
