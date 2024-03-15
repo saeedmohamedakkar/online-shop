@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { BsCart2 } from "react-icons/bs";
 import { FcShop } from "react-icons/fc";
-import Nav from 'react-bootstrap/Nav';
 
 
 

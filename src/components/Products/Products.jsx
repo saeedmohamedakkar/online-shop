@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { AiOutlineStar } from "react-icons/ai";
 
-const Products = ({ products, loading, addCart }) => {
+const Products = ({ products,addCart }) => {
 
     let [show, setShow] = useState(false)
 
@@ -15,10 +15,9 @@ const Products = ({ products, loading, addCart }) => {
     }
 
 
-
     return <>
 
-        {loading ? <h2 className='text-center'>loading....</h2> : <div className='container justify-content-evenly '>
+        {products.length === 0 ? <div className='my-5 d-flex justify-content-center align-content-center'><h2 className='text-center my-5 '>loading....</h2></div> : <div className='container justify-content-evenly '>
 
             <div className="row">
 

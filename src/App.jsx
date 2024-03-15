@@ -28,7 +28,7 @@ export default function App() {
 
 let[isAdmin,setCheckAdmin] =useState(false) 
 
-let [loading,setLoading] = useState(true)
+// let [loading,setLoading] = useState(true)
 
 let [products,setProducts] = useState([]) 
 let [cartItem,setCartItem]= useState([])
@@ -45,9 +45,9 @@ useEffect(()=>{
 
 ///////////////////////////////////////////////
   useEffect(()=>{
-    setLoading(true)
+    // setLoading(true)
     axios({method:"get",url:"https://db-kco2.onrender.com/products"}).then((data=>setProducts(data.data)))
-    setLoading(false)
+    // setLoading(false)
   },[])
 
 
@@ -109,7 +109,7 @@ function removeItem(id) {
 
 <Route path='/' element={<Home/>}/>
 <Route path='cart' element={<Cart cartItem={cartItem} deletItems={deletItems} increase={increase} minus={minus} removeItem={removeItem} />}/>
-<Route path='products' element={<Products products={products} loading={loading} addCart={addCart}/>}/>
+<Route path='products' element={<Products products={products}  addCart={addCart}/>}/>
 <Route path='*' element={<Error/>}/>
 <Route path='logIn' element={ localStorage.length===0 ?<LogIn users={users}/> :<Profile/>}/>
 <Route path='/logIn/creatrAccount' element={<CreateAccount users={users}/>}/>
