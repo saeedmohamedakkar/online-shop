@@ -33,7 +33,7 @@ const LogIn = ({ users }) => {
       localStorage.setItem("user data", JSON.stringify(...userData))
       navigate("/products")
 
-      localStorage.setItem('isAdmin',"true");
+      localStorage.setItem('isAdmin', "true");
 
     }
 

@@ -1,22 +1,18 @@
-import  React  from 'react';
-
+import  React, { useEffect }  from 'react';
 import header from "../../Assets/Images//1024x1024-Mens-Jackets-Racer-Tobacco-081523-1_768e793d-93df-47be-b353-c6def99affd7.webp";
-
 import sunGlas from "../../Assets/Images/SF-are-your-sunglasses-real-or-fake-2.jpg"
-
 import shoes from "../../Assets/Images/best-running-shoes-for-men-01-52191575003b4281ac1cf2d7b29b5362.jpg"
-
 import last1 from "../../Assets/Images/m-st-boxhead-black-smartees-original-imagr6yyw5hnn5zg.webp"
-
 import last2 from "../../Assets/Images/8d02834bae0322880d931fc0a4ee7374.jpg"
-
 import last3 from "../../Assets/Images/1024x1024-Mens-Jackets-Racer-Tobacco-081523-1_768e793d-93df-47be-b353-c6def99affd7.webp"
-
 import last4 from "../../Assets/Images/last.jpg"
-
-
 import { BsArrowRightShort } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
+
+
+
+
+
 const Home = () => {
 
    
@@ -26,6 +22,24 @@ const Home = () => {
     function shopNow() {
        navigate("/products")
     }
+
+
+    const Swal = require('sweetalert2')
+
+function alertInfo() {
+    Swal.fire({
+        icon: "info",
+        text: "You Can Add Remove View And Edit Any Product Or User But First Log In Email : saeed.m6063@yahoo.com Password : 123456789, So You Can Be The Admin"
+        ,
+        
+      });
+}
+
+
+useEffect(()=>{
+    alertInfo()
+},[])
+
     
     return ( <>
     
