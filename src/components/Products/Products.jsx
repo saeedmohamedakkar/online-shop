@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import { AiOutlineStar } from "react-icons/ai";
 
 const Products = ({ products,addCart }) => {
@@ -13,6 +13,7 @@ const Products = ({ products,addCart }) => {
 
 
     }
+
 
 
     return <>

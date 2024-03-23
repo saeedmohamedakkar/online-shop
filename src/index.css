@@ -201,7 +201,7 @@ background-size:100%;
 }
 a{text-decoration: none!important}
 
-.imges{cursor: pointer!important}
+.imges{ cursor: pointer!important ; aspect-ratio: 5/5;mix-blend-mode: darken; }
 
 .imges:hover{ transform:scale(1.050) ; -webkit-transform:scale(1.050) ; -moz-transform:scale(1.050) ; -ms-transform:scale(1.050) ; -o-transform:scale(1.050) ; }
 
