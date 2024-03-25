@@ -18,7 +18,19 @@ const Products = ({ products,addCart }) => {
 
     return <>
 
-        {products.length === 0 ? <div className='my-5 d-flex justify-content-center align-content-center'><h2 className='text-center my-5 '>loading....</h2></div> : <div className='container justify-content-evenly '>
+        {products.length ===0?<div className="wrapper">
+        
+
+<div>L</div>
+<div>O</div>
+<div>A</div>
+<div>D</div>
+<div>I</div>
+<div>N</div>
+<div>G</div>
+
+
+</div> : <div className='container justify-content-evenly '>
 
             <div className="row">
 
