@@ -42,7 +42,19 @@ export default function ViewProduct() {
                 <p className="text-warning">Rate {items.rating.rate}</p>
                 <p className="text-success">{items.price}$</p>
             </div>
-                : "loading..."}
+                : <div className="wrapper">
+        
+
+                <div>L</div>
+                <div>O</div>
+                <div>A</div>
+                <div>D</div>
+                <div>I</div>
+                <div>N</div>
+                <div>G</div>
+                
+                
+                </div>}
 
 
 
